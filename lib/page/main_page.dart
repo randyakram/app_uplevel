@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:learning_app_ui/page/detail_course.dart';
 import 'package:learning_app_ui/utils.dart';
 
+import 'detail_course2.dart';
+
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
 
@@ -264,118 +266,128 @@ class MainPage extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        Container(
-                          height: 330.0,
-                          width: 320,
-                          decoration: const BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(
-                                16.0,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DetailCourse2()),
+                            );
+                          },
+                          child: Container(
+                            height: 330.0,
+                            width: 320,
+                            decoration: const BoxDecoration(
+                              color: white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(
+                                  16.0,
+                                ),
                               ),
                             ),
-                          ),
-                          child: Column(
-                            children: [
-                              Stack(
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(12.0),
-                                      topRight: Radius.circular(12.0),
+                            child: Column(
+                              children: [
+                                Stack(
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: const BorderRadius.only(
+                                        topLeft: Radius.circular(12.0),
+                                        topRight: Radius.circular(12.0),
+                                      ),
+                                      child: Image.network(
+                                        'https://static.vecteezy.com/system/resources/thumbnails/004/580/539/small_2x/ui-ux-programmer-flat-design-illustration-vector.jpg',
+                                        height: 220.0,
+                                        width: double.maxFinite,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
-                                    child: Image.network(
-                                      'https://static.vecteezy.com/system/resources/thumbnails/004/580/539/small_2x/ui-ux-programmer-flat-design-illustration-vector.jpg',
-                                      height: 220.0,
-                                      width: double.maxFinite,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                      left: 20,
-                                      top: 160.0,
-                                    ),
-                                    child: Container(
-                                      height: 40,
-                                      width: 110,
-                                      alignment: Alignment.center,
-                                      decoration: const BoxDecoration(
-                                        color: white,
-                                        borderRadius: BorderRadius.all(
-                                          Radius.circular(
-                                            16.0,
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                        left: 20,
+                                        top: 160.0,
+                                      ),
+                                      child: Container(
+                                        height: 40,
+                                        width: 110,
+                                        alignment: Alignment.center,
+                                        decoration: const BoxDecoration(
+                                          color: white,
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(
+                                              16.0,
+                                            ),
+                                          ),
+                                        ),
+                                        child: Text(
+                                          "13 Video",
+                                          style: GoogleFonts.montserrat(
+                                            color: black,
+                                            fontSize: 16,
+                                            letterSpacing: 1,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ),
-                                      child: Text(
-                                        "13 Video",
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 5.0,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Belajar UI/UX",
                                         style: GoogleFonts.montserrat(
                                           color: black,
-                                          fontSize: 16,
+                                          fontSize: 20,
                                           letterSpacing: 1,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 5.0,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(10),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Belajar UI/UX",
-                                      style: GoogleFonts.montserrat(
-                                        color: black,
-                                        fontSize: 20,
-                                        letterSpacing: 1,
-                                        fontWeight: FontWeight.bold,
+                                      const SizedBox(
+                                        height: 16.0,
                                       ),
-                                    ),
-                                    const SizedBox(
-                                      height: 16.0,
-                                    ),
-                                    Row(
-                                      children: [
-                                        const CircleAvatar(
-                                          radius: 16,
-                                          backgroundImage: NetworkImage(
-                                              'https://picsum.photos/1000'),
-                                        ),
-                                        const SizedBox(
-                                          width: 10.0,
-                                        ),
-                                        Text(
-                                          "John",
-                                          style: GoogleFonts.montserrat(
-                                            color: black,
-                                            fontSize: 18,
-                                            letterSpacing: 1,
-                                            fontWeight: FontWeight.w500,
+                                      Row(
+                                        children: [
+                                          const CircleAvatar(
+                                            radius: 16,
+                                            backgroundImage: NetworkImage(
+                                                'https://picsum.photos/1000'),
                                           ),
-                                        ),
-                                        const Spacer(),
-                                        Text(
-                                          "\Rp 300.000 ",
-                                          style: GoogleFonts.montserrat(
-                                            color: black,
-                                            fontSize: 18,
-                                            letterSpacing: 1,
-                                            fontWeight: FontWeight.w500,
+                                          const SizedBox(
+                                            width: 10.0,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                          Text(
+                                            "John",
+                                            style: GoogleFonts.montserrat(
+                                              color: black,
+                                              fontSize: 18,
+                                              letterSpacing: 1,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                          const Spacer(),
+                                          Text(
+                                            "\Rp 300.000 ",
+                                            style: GoogleFonts.montserrat(
+                                              color: black,
+                                              fontSize: 18,
+                                              letterSpacing: 1,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -434,7 +446,7 @@ class MainPage extends StatelessWidget {
                                           ),
                                         ),
                                         child: Text(
-                                          "36 Video",
+                                          "16 Video",
                                           style: GoogleFonts.montserrat(
                                             color: black,
                                             fontSize: 16,
